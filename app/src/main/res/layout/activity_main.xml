@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:animateLayoutChanges="true">
 
 
     <!--  Left side views  -->
@@ -24,7 +25,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="Tip %"
+        android:text="Tip (%)"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintEnd_toEndOf="@+id/tvBaseLabel"
         app:layout_constraintTop_toBottomOf="@+id/tvBaseLabel" />
@@ -35,10 +36,10 @@
         android:id="@+id/tvTipPercent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
+        android:layout_marginStart="6dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintBottom_toBottomOf="@+id/seekBarTip"
-        app:layout_constraintStart_toEndOf="@+id/seekBarTip"
+        app:layout_constraintStart_toEndOf="@+id/tvTipEmoji"
         app:layout_constraintTop_toTopOf="@+id/seekBarTip"
         tools:text="24%" />
 
@@ -233,13 +234,14 @@
         tools:visibility="visible" />
 
     <Button
-        android:id="@+id/buttomCustomTip"
+        android:id="@+id/buttonCustomTip"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
+        android:layout_marginStart="60dp"
         android:text="🔧"
+        app:cornerRadius="10dp"
         app:layout_constraintBottom_toBottomOf="@+id/tvTipPercentLabel"
-        app:layout_constraintStart_toEndOf="@+id/tvTipPercent"
+        app:layout_constraintStart_toEndOf="@+id/tvTipEmoji"
         app:layout_constraintTop_toTopOf="@+id/tvTipPercentLabel" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

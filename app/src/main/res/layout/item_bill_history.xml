@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground">
+
+    <TextView
+        android:id="@+id/tvItemTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/primary_black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="McDonald's" />
+
+    <TextView
+        android:id="@+id/tvItemTotalAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvItemTotalLabel"
+        app:layout_constraintStart_toEndOf="@+id/tvItemTotalLabel"
+        app:layout_constraintTop_toTopOf="@+id/tvItemTotalLabel"
+        app:layout_constraintVertical_bias="1.0"
+        tools:text="$40" />
+
+    <TextView
+        android:id="@+id/tvItemTipAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvItemTipLabel"
+        app:layout_constraintStart_toEndOf="@+id/tvItemTipLabel"
+        app:layout_constraintTop_toTopOf="@+id/tvItemTipLabel"
+        tools:text="$30" />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvItemTipAmount" />
+
+    <TextView
+        android:id="@+id/tvItemTipLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="Tip:"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tvItemTitle"
+        app:layout_constraintTop_toBottomOf="@+id/tvItemTitle" />
+
+    <TextView
+        android:id="@+id/tvItemTotalLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="Total:"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tvItemTipAmount"
+        app:layout_constraintStart_toEndOf="@+id/tvItemTipAmount"
+        app:layout_constraintTop_toTopOf="@+id/tvItemTipAmount" />
+
+    <TextView
+        android:id="@+id/tvDateCreated"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="July 1 2022" />
+</androidx.constraintlayout.widget.ConstraintLayout>
